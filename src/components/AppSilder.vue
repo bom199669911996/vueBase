@@ -8,7 +8,7 @@
             <!-- <span class="sr-only">(current)</span> -->
           <!-- </a> -->
        
-        <li class="active">
+        <!-- <li class="active">
           <a href="#">英雄列表</a>
         </li>
         <li>
@@ -16,7 +16,16 @@
         </li>
         <li>
           <a href="#">装备列表</a>
-        </li>
+        </li> -->
+        <router-link  to="/heroes" tag='li' class="active">
+          <a>英雄列表</a>
+        </router-link>
+        <router-link  to="/equips"  tag='li'>
+          <a>武器列表</a>
+        </router-link>
+        <router-link   to="/weapous" tag='li'>
+          <a>装备列表</a>
+        </router-link>
       </ul>
     </div>
     
