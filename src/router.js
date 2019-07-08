@@ -7,6 +7,8 @@ Vue.use(VueRouter);
 import herolist from './views/heroes/herolist.vue'
 import equips from './views/equips/equips.vue'
 import weapous from './views/weapous/weapous.vue'
+// 引入添加英雄人物列表
+import heroadd from './views/heroes/heroadd.vue'
 // 3-创建VueRouter实例，配置路由规则
 const router = new VueRouter({
     // 处理高亮显示全局匹配---精确到每一个对应路由
@@ -18,6 +20,7 @@ const router = new VueRouter({
       {name:'heroes',path:'/heroes',component:herolist},
       {name:'equips',path:'/equips',component:equips},
       {name:'weapous',path:'/weapous',component:weapous},
+      {name:'heroadd',path:'/heroes/heroadd',component:heroadd},
     ]
   })
 //   4-导出路由模块
