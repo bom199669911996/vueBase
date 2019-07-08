@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router' // 加载路由模块
+import VueRouter from '../node_modules/vue-router' // 加载路由模块
 
 
 // 引入样式
@@ -15,7 +15,9 @@ Vue.use(VueRouter);
 
 // 创建VueRouter实例，配置路由表
 const appRouter = new VueRouter({
-  routes: []
+  routes: [
+    
+  ]
 })
 
 
