@@ -9,6 +9,9 @@ import equips from './views/equips/equips.vue'
 import weapous from './views/weapous/weapous.vue'
 // 引入添加英雄人物列表
 import heroadd from './views/heroes/heroadd.vue'
+// 引入编辑英雄人物列表
+import heroedit from './views/heroes/heroedit.vue'
+
 // 3-创建VueRouter实例，配置路由规则
 const router = new VueRouter({
     // 处理高亮显示全局匹配---精确到每一个对应路由
@@ -21,6 +24,9 @@ const router = new VueRouter({
       {name:'equips',path:'/equips',component:equips},
       {name:'weapous',path:'/weapous',component:weapous},
       {name:'heroadd',path:'/heroes/heroadd',component:heroadd},
+    //   点击编辑按钮，传递此时点击edit的id'并设置props
+      {name:'heroedit',path:'/heroes/heroedit/:id',component:heroedit, props: true},
+    
     ]
   })
 //   4-导出路由模块

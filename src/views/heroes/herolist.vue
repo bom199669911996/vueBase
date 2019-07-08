@@ -23,7 +23,10 @@
             <td>{{items.name}}</td>
             <td>{{items.gender}}</td>
             <td>
-              <a href="edit.html">edit</a>
+              <!-- v-bind方法 将数值传递过去 -->
+              <router-link :to="'/heroes/heroedit/'+ items.id">
+                <a>edit</a>
+              </router-link>
               &nbsp;&nbsp;
               <a href="javascript:" @click="delitem(items.id)">delete</a>
             </td>
