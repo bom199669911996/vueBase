@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from '../node_modules/vue-router' // 加载路由模块
+// 1-加载路由模块
+import VueRouter from 'vue-router'
 
 
 // 引入样式
@@ -10,19 +11,19 @@ import "./assets/css/index.css";
 // true提示开发环境
 Vue.config.productionTip = true
 
-// 注册VueRouter
+// 2-注册VueRouter 用npm下载必须注册
 Vue.use(VueRouter);
 
-// 创建VueRouter实例，配置路由表
-const appRouter = new VueRouter({
+// 3-创建VueRouter实例，配置路由表
+const router = new VueRouter({
   routes: [
     
   ]
 })
 
 
-// 渲染App.vue文件，挂载到#app
+// 4-渲染App.vue文件，挂载到#app
 new Vue({
   render: h => h(App),
-  router: appRouter
+  router,
 }).$mount('#app')
