@@ -54,7 +54,7 @@ export default {
     //发送axios请求，获取数据
     getdata() {
       this.axios
-        .get(`http://localhost:3000/heroes`)
+        .get(`heroes`)
         .then(res => {
           const { data, status } = res;
           if (status == 200) {
@@ -70,7 +70,7 @@ export default {
         return false;
       }
       // 地址记得写反引号
-      this.axios.delete(`http://localhost:3000/heroes/${id}`)
+      this.axios.delete(`heroes/${id}`)
       .then((res) => {
         if (res.status == 200) {
           this.getdata();

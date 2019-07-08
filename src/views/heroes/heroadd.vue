@@ -36,7 +36,7 @@ export default {
     },
     methods:{
         additem(){
-            this.axios.post(`http://localhost:3000/heroes`,this.fordata)
+            this.axios.post(`heroes`,this.fordata)
             .then((res)=>{
                 if(res.status== 201){
                     // 编程式导航

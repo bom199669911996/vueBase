@@ -12,8 +12,8 @@ Vue.config.productionTip = true
 
 
 
-
-
+// 配置baseURL， 将来axios会自动把 baseURL和 get(url) 中的路径拼接起来
+axios.defaults.baseURL = 'http://localhost:3000/'
 
 // 导入router模块
 import router from './router.js'

@@ -41,7 +41,7 @@ export default {
     },
     methods:{
         getshuju(){
-            this.axios.get(`http://localhost:3000/heroes/${this.id}`)
+            this.axios.get(`heroes/${this.id}`)
             .then((res)=>{
                 const {status,data} = res
                 if(status==200){
@@ -53,7 +53,7 @@ export default {
             })
         },
         edititem(){
-           this.axios.put(`http://localhost:3000/heroes/${this.id}`,this.fordata)
+           this.axios.put(`heroes/${this.id}`,this.fordata)
             .then((res)=>{
                 if(res.status==200){
                     // 跳转回页面
