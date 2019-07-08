@@ -23,7 +23,7 @@
 
 <script>
 // 导入axios
-import axios from "axios";
+
 export default {
      props:['id'],
     data(){
@@ -41,7 +41,7 @@ export default {
     },
     methods:{
         getshuju(){
-            axios.get(`http://localhost:3000/heroes/${this.id}`)
+            this.axios.get(`http://localhost:3000/heroes/${this.id}`)
             .then((res)=>{
                 const {status,data} = res
                 if(status==200){
@@ -53,7 +53,7 @@ export default {
             })
         },
         edititem(){
-            axios.put(`http://localhost:3000/heroes/${this.id}`,this.fordata)
+           this.axios.put(`http://localhost:3000/heroes/${this.id}`,this.fordata)
             .then((res)=>{
                 if(res.status==200){
                     // 跳转回页面

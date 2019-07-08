@@ -23,7 +23,7 @@
 
 <script>
 // 导入axios
-import axios from "axios";
+
 export default {
     data(){
         return{
@@ -36,7 +36,7 @@ export default {
     },
     methods:{
         additem(){
-            axios.post(`http://localhost:3000/heroes`,this.fordata)
+            this.axios.post(`http://localhost:3000/heroes`,this.fordata)
             .then((res)=>{
                 if(res.status== 201){
                     // 编程式导航

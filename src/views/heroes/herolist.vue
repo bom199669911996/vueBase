@@ -38,8 +38,8 @@
 </template>
 
 <script>
-// 导入axios
-import axios from "axios";
+
+
 export default {
   data() {
     return {
@@ -53,7 +53,7 @@ export default {
   methods: {
     //发送axios请求，获取数据
     getdata() {
-      axios
+      this.axios
         .get(`http://localhost:3000/heroes`)
         .then(res => {
           const { data, status } = res;
@@ -70,7 +70,7 @@ export default {
         return false;
       }
       // 地址记得写反引号
-      axios.delete(`http://localhost:3000/heroes/${id}`)
+      this.axios.delete(`http://localhost:3000/heroes/${id}`)
       .then((res) => {
         if (res.status == 200) {
           this.getdata();
