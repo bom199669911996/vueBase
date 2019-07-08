@@ -51,6 +51,18 @@ export default {
             .catch((err)=>{
                 console.log(err)
             })
+        },
+        edititem(){
+            axios.put(`http://localhost:3000/heroes/${this.id}`,this.fordata)
+            .then((res)=>{
+                if(res.status==200){
+                    // 跳转回页面
+                    this.$router.push('/heroes')
+                }
+            })
+             .catch((err)=>{
+                console.log(err)
+            })
         }
     }
 
